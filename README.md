@@ -1,12 +1,12 @@
-Test API
-=========
+Tortuga Test API
+================
 
 Dette API-et skal i best mulig grad speile [Skatteetaten sitt API](https://skatteetaten.github.io/datasamarbeid-api-dokumentasjon/reference_pgi.html).
 APIet vil svare med tilfeldige data, og vil også **feile tilfeldig**.
 
 ## Endepunkter
 
-### VarslingsAPI
+### Hendelseliste for beregnet skatt
 
 Endepunkt: `/api/formueinntekt/beregnetskatt/hendelser`
 
@@ -46,3 +46,37 @@ Svarer med en tilfeldig inntekt:
 ## Testdata
 
 Ved oppstart vil Hibernate automatisk opprette en database basert på klasser annotert med `@Entity` og utføre SQL-ene definert i `src/main/resources/import.sql`.
+
+Utover dette kan man opprette hendelser on-the-fly via følgende grensesnitt:
+
+```
+curl -X POST http://hostname:port/createHendelser/<antall hendelser>
+```
+
+## Installasjon og kjøring
+
+### Bygging
+
+For å bygge JAR og tilhørende Docker images:
+
+```
+make
+```
+
+Det er fullt mulig å bygge med maven også:
+
+```
+mvn package
+```
+
+---
+
+# Henvendelser
+
+Spørsmål knyttet til koden eller prosjektet kan rettes mot:
+
+* David Steinsland, david.steinsland@nav.no
+
+## For NAV-ansatte
+
+Interne henvendelser kan sendes via Slack i kanalen #peon.
