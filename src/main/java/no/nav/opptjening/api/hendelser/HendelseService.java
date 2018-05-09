@@ -21,6 +21,10 @@ public class HendelseService {
         this.repository = repository;
     }
 
+    public void lagreHendelse(Hendelse hendelse) {
+        repository.save(hendelse);
+    }
+
     public void lagreHendelser(Iterable<Hendelse> hendelser) {
         repository.save(hendelser);
     }

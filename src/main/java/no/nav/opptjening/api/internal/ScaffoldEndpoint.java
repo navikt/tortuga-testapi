@@ -49,6 +49,17 @@ public class ScaffoldEndpoint {
         hendelseSerice.lagreHendelser(hendelser);
     }
 
+    @RequestMapping(method = {RequestMethod.POST}, value="/createHendelse/{inntektsaar}/{fnr}")
+    public void createHendelser(@PathVariable String inntektsaar, @PathVariable String fnr) {
+        LOG.info("Lager hendelse og beregnet skatt for {} i {}", fnr, inntektsaar);
+
+        Hendelse hendelse = new Hendelse(fnr, inntektsaar);
+        BeregnetSkatt beregnetSkatt = getRandomBeregnetSkatt(fnr, inntektsaar);
+
+        beregnetSkattService.lagreBeregnetSkatt(beregnetSkatt);
+        hendelseSerice.lagreHendelse(hendelse);
+    }
+
     private BeregnetSkatt getRandomBeregnetSkatt(String fnr, String år) {
         return new BeregnetSkatt(new BeregnetSkatt.PersonInntekt(fnr, år), getRandomInntekt(), getRandomInntekt(),
                 getRandomInntekt(), getRandomInntekt(), getRandomInntekt(), getRandomInntekt(), getRandomInntekt(),

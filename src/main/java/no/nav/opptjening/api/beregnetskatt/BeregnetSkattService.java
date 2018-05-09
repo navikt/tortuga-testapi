@@ -22,6 +22,10 @@ public class BeregnetSkattService {
         this.repository = repository;
     }
 
+    public void lagreBeregnetSkatt(BeregnetSkatt beregnetSkatt) {
+        repository.save(beregnetSkatt);
+    }
+
     public void lagreBeregnetSkatt(Iterable<BeregnetSkatt> beregnetSkatt) {
         repository.save(beregnetSkatt);
     }
