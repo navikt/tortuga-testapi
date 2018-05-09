@@ -2,7 +2,7 @@ package no.nav.opptjening.api.beregnetskatt;
 
 class BeregnetSkattDto {
 
-    private final String personindentifikator;
+    private final String personidentifikator;
     private final String inntektsaar;
     private final int sumSaerfradrag;
     private final int skjermingsfradrag;
@@ -36,8 +36,8 @@ class BeregnetSkattDto {
     private final int grunnlagTrinnskattUtenomPersoninntekt;
     private final int personinntektUfoeretrygd;
 
-    BeregnetSkattDto(String personindentifikator, String inntektsaar, int sumSaerfradrag, int skjermingsfradrag, int formuePrimaerbolig, int samletGjeld, int personinntektLoenn, int personinntektPensjon, int personinntektFiskeFangstFamiliebarnehage, int personinntektNaering, int personinntektBarePensjonsdel, int personinntektBareSykedel, int samletPensjon, double pensjonsgrad, int antallMaanederPensjon, int tolvdeler, String skatteklasse, int nettoformue, int nettoinntekt, int utlignetSkatt, int grunnlagTrinnskatt, int svalbardGjeld, int svalbardLoennLoennstrekkordningen, int svalbardPensjonLoennstrekkordningen, int svalbardPersoninntektNaering, int svalbardLoennUtenTrygdeavgiftLoennstrekkordningen, int svalbardSumAllePersoninntekter, int svalbardNettoformue, int svalbardNettoinntekt, int svalbardUtlignetSkatt, int svalbardUfoeretrygdLoennstrekkordningen, int grunnlagTrinnskattUtenomPersoninntekt, int personinntektUfoeretrygd) {
-        this.personindentifikator = personindentifikator;
+    BeregnetSkattDto(String personidentifikator, String inntektsaar, int sumSaerfradrag, int skjermingsfradrag, int formuePrimaerbolig, int samletGjeld, int personinntektLoenn, int personinntektPensjon, int personinntektFiskeFangstFamiliebarnehage, int personinntektNaering, int personinntektBarePensjonsdel, int personinntektBareSykedel, int samletPensjon, double pensjonsgrad, int antallMaanederPensjon, int tolvdeler, String skatteklasse, int nettoformue, int nettoinntekt, int utlignetSkatt, int grunnlagTrinnskatt, int svalbardGjeld, int svalbardLoennLoennstrekkordningen, int svalbardPensjonLoennstrekkordningen, int svalbardPersoninntektNaering, int svalbardLoennUtenTrygdeavgiftLoennstrekkordningen, int svalbardSumAllePersoninntekter, int svalbardNettoformue, int svalbardNettoinntekt, int svalbardUtlignetSkatt, int svalbardUfoeretrygdLoennstrekkordningen, int grunnlagTrinnskattUtenomPersoninntekt, int personinntektUfoeretrygd) {
+        this.personidentifikator = personidentifikator;
         this.inntektsaar = inntektsaar;
         this.sumSaerfradrag = sumSaerfradrag;
         this.skjermingsfradrag = skjermingsfradrag;
@@ -72,8 +72,8 @@ class BeregnetSkattDto {
         this.personinntektUfoeretrygd = personinntektUfoeretrygd;
     }
 
-    public String getPersonindentifikator() {
-        return personindentifikator;
+    public String getPersonidentifikator() {
+        return personidentifikator;
     }
 
     public String getInntektsaar() {
@@ -208,7 +208,7 @@ class BeregnetSkattDto {
     public String toString() {
         StringBuilder sb = new StringBuilder("[");
         return sb.append("pid: ")
-                .append(personindentifikator)
+                .append(personidentifikator)
                 .append(", inntektsAar: ")
                 .append(inntektsaar)
                 .append("]")
