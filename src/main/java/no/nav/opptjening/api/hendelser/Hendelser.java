@@ -16,7 +16,7 @@ import java.util.Optional;
 import java.util.Random;
 
 @RestController
-@RequestMapping("/ekstern/skatt/datasamarbeid/api/formueinntekt/beregnetskatt/hendelser")
+@RequestMapping("/ekstern/skatt/datasamarbeid/api/formueinntekt/skatteoppegjoer/hendelser")
 public class Hendelser {
 
     private final CounterBuffers counterBuffers;
