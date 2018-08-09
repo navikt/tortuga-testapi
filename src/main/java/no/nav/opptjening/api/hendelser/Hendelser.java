@@ -78,7 +78,7 @@ public class Hendelser {
     }
 
     @RequestMapping(value = "/start", method = RequestMethod.GET)
-    public SekvensDto hentSisteSekvens(@RequestParam(value = "dato") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dato) {
+    public SekvensDto hentSisteSekvens(@RequestParam(value = "dato", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dato) {
         SekvensDto sekvensDto = new SekvensDto(1);
 
         if (sekvensDto == null) {
