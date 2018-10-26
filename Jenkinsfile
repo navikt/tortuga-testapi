@@ -43,7 +43,7 @@ node {
             }
         }
 
-        stage("deploy") {
+        stage("deploy preprod") {
             build([
                     job       : 'nais-deploy-pipeline',
                     wait      : false,
